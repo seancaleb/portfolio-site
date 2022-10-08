@@ -1,9 +1,4 @@
-import {
-    GetStaticProps,
-    InferGetStaticPropsType,
-    InferGetServerSidePropsType,
-    GetServerSideProps,
-} from "next";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { About, Hero, Projects, Skills } from "../components";
 import { Project, Skill } from "../types";
@@ -17,7 +12,7 @@ type HomepageProps = {
 const Home = ({
     skills,
     projects,
-}: InferGetStaticPropsType<typeof getServerSideProps>) => {
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <>
             <Head>
@@ -35,9 +30,7 @@ const Home = ({
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps<
-    HomepageProps
-> = async () => {
+export const getStaticProps: GetStaticProps<HomepageProps> = async () => {
     const skills = await loadSkills();
     const projects = await loadProjects();
 
