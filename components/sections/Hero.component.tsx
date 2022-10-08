@@ -2,12 +2,12 @@ import Section from "../Section.component";
 import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { transition, ease } from "../../data/framer";
+import { ease } from "../../data/framer";
 
 const Hero = () => {
     return (
         <Section className="relative">
-            <div className="min-h-[100vh] flex flex-col col-span-12 justify-center py-16 relative">
+            <div className="min-h-[100vh] flex flex-col col-span-12 justify-center py-[30vh] relative">
                 <div className="absolute top-[45%] left-0 w-48 h-48 bg-[#0041C4] rounded-full translate -translate-x-12 xs:-translate-x-24 -translate-y-60 xs:-translate-y-48 bg-opacity-20 blur-3xl" />
 
                 <div className="absolute top-[55%] left-[25%] w-48 h-48 bg-primary rounded-full translate -translate-x-24 xs:-translate-x-48 -translate-y-60 xs:-translate-y-48 bg-opacity-20 blur-3xl" />
@@ -19,7 +19,7 @@ const Hero = () => {
                         ease,
                         duration: 0.6,
                     }}
-                    className="text-[9.5vw] xs:text-4xl md:text-5xl tracking-[-.25px] font-medium text-white mb-4 leading-[130%] xs:leading-[140%] z-50"
+                    className="text-[9.5vw] xs:text-4xl md:text-5xl tracking-[-.25px] font-medium text-white mb-4 leading-[120%] xs:leading-[140%] z-50"
                 >
                     A self-taught{" "}
                     <span className="text-primary-light inline-block z-50">
@@ -83,37 +83,9 @@ const Hero = () => {
 
 export default Hero;
 
-// const animation = {
-//     initial: {
-//         y: 10,
-//         opacity: 0,
-//     },
-//     animate: {
-//         y: 0,
-//         opacity: 1,
-//         transition: {
-//             type: "tween",
-//             delayChildren: 0.8,
-//             staggerChildren: 0.2,
-//             ease: "linear",
-//         },
-//     },
-// };
-
-// const item = {
-//     initial: {
-//         y: 10,
-//         opacity: 0,
-//     },
-//     animate: {
-//         y: 0,
-//         opacity: 1,
-//     },
-// };
-
 const animation = {
     initial: {
-        y: 20,
+        y: 15,
         opacity: 0,
     },
     whileInView: { y: 0, opacity: 1 },

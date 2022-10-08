@@ -21,7 +21,7 @@ export default Section;
 
 const animation = {
     initial: {
-        y: 20,
+        y: 15,
         opacity: 0,
     },
     whileInView: { y: 0, opacity: 1 },
