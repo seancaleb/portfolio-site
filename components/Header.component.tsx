@@ -17,7 +17,7 @@ const Header = () => {
                     </a>
                 </Link>
 
-                <Link href="https://github.com/seancaleb/my-portfolio">
+                <Link href="https://github.com/seancaleb/portfolio-site">
                     <a target="_blank" className="flex items-center gap-4">
                         <GithubOutlined className="icon" />
                     </a>
