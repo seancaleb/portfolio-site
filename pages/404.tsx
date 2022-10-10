@@ -11,7 +11,9 @@ const NotFound = () => {
                 <title>Sean Caleb</title>
             </Head>
             <Section>
-                <div className="min-h-[100vh] flex flex-col col-span-12 justify-center items-center">
+                <div className="min-h-[100vh] flex flex-col col-span-12 justify-center items-center relative">
+                    <div className="absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] w-48 h-48 bg-[#0041C4] rounded-full bg-opacity-10 blur-3xl pointer-events-none" />
+
                     <div className="flex flex-col items-center gap-4 mb-6">
                         <motion.h1
                             {...animation}
