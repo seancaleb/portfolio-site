@@ -1,5 +1,9 @@
 import Section from "../Section.component";
-import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
+import {
+    DownloadOutlined,
+    GithubOutlined,
+    LinkedinOutlined,
+} from "@ant-design/icons";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ease } from "../../data/framer";
@@ -8,9 +12,9 @@ const Hero = () => {
     return (
         <Section className="relative">
             <div className="min-h-[100vh] flex flex-col col-span-12 justify-center py-[30vh] relative">
-                <div className="absolute top-[45%] left-0 w-48 h-48 bg-[#0041C4] rounded-full translate -translate-x-12 xs:-translate-x-24 -translate-y-60 xs:-translate-y-48 bg-opacity-20 blur-3xl" />
+                <div className="absolute top-[45%] left-0 w-48 h-48 bg-[#0041C4] rounded-full translate -translate-x-12 xs:-translate-x-24 -translate-y-60 xs:-translate-y-48 bg-opacity-20 blur-3xl pointer-events-none" />
 
-                <div className="absolute top-[55%] left-[25%] w-48 h-48 bg-primary rounded-full translate -translate-x-24 xs:-translate-x-48 -translate-y-60 xs:-translate-y-48 bg-opacity-20 blur-3xl" />
+                <div className="absolute top-[55%] left-[25%] w-48 h-48 bg-primary rounded-full translate -translate-x-24 xs:-translate-x-48 -translate-y-60 xs:-translate-y-48 bg-opacity-20 blur-3xl pointer-events-none" />
 
                 <motion.h1
                     {...animation}
@@ -54,9 +58,12 @@ const Hero = () => {
                     <Link href="/resume">
                         <a
                             target="_blank"
-                            className="px-6 py-2 text-[15px] uppercase font-medium border border-primary-light text-primary-light rounded-md hover:bg-primary-light hover:bg-opacity-5 trasition duration-300"
+                            className="px-6 py-2 text-[15px] uppercase font-medium border border-primary-light text-primary-light rounded-md hover:bg-primary-light hover:bg-opacity-5 trasition duration-300 flex gap-2"
                         >
-                            Resume
+                            <span className="inline-block mt-[2px]">
+                                <DownloadOutlined className="text-primary-light text-base" />
+                            </span>
+                            <span className="inline-block">Resume</span>
                         </a>
                     </Link>
 
